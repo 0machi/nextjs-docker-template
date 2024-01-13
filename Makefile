@@ -22,8 +22,11 @@ logs:
 sh:
 	$(DC) exec nextjs sh
 
+npm-install:
+	$(DC) run --rm nextjs npm install
 
 init:
 	@make down-v
 	@make build
+	@make npm-install
 	@make up
