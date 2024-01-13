@@ -1,0 +1,1 @@
+# nextjs-docker-template
