@@ -3,6 +3,7 @@ DC := docker compose -f $(COMPOSE_YML)
 
 
 build:
+	mkdir -p node_modules
 	$(DC) build
 
 up:
