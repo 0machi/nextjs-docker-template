@@ -1,10 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "exactOptionalPropertyTypes": true /* Interpret optional property types as written, rather than adding 'undefined'. */,
+    "noImplicitReturns": true /* Enable error reporting for codepaths that do not explicitly return in a function. */,
+    "noFallthroughCasesInSwitch": true /* Enable error reporting for fallthrough cases in switch statements. */,
+    "noUncheckedIndexedAccess": true /* Add 'undefined' to a type when accessed using an index. */,
+    "noImplicitOverride": true /* Ensure overriding members in derived classes are marked with an override modifier. */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
@@ -22,6 +28,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "dist/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

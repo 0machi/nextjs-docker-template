@@ -1,3 +1,20 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "object-shorthand": "error",
+    "tailwindcss/no-custom-classname": "off",
+    "react/jsx-curly-brace-presence": "error",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": false
+      }
+    ]
+  }
 }
