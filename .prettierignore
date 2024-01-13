@@ -6,3 +6,5 @@ out/
 public/
 package-lock.json
 next.config.js
+*.Dockerfile
+*compose.*.yml
