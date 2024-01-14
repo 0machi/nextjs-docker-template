@@ -1,5 +1,6 @@
 COMPOSE_YML := docker-compose.dev.yml
 DC := docker compose -f $(COMPOSE_YML)
+SERVICE := nextjs
 
 
 build:
@@ -17,13 +18,13 @@ down-v:
 	$(DC) down --remove-orphans --volumes
 
 logs:
-	$(DC) logs -f nextjs
+	$(DC) logs -f $(SERVICE)
 
 sh:
-	$(DC) exec nextjs sh
+	$(DC) exec $(SERVICE) sh
 
 npm-install:
-	$(DC) run --rm nextjs npm install
+	$(DC) run --rm $(SERVICE) npm install
 
 init:
 	@make down-v
