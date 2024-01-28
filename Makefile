@@ -8,8 +8,7 @@ build:
 	$(DC) build
 
 up:
-	$(DC) up
-	@make logs
+	$(DC) up -d
 
 down:
 	$(DC) down --remove-orphans
@@ -31,3 +30,4 @@ init:
 	@make build
 	@make npm-install
 	@make up
+	@make logs

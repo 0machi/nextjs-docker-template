@@ -8,7 +8,9 @@ FROM base AS deps
 # To add the missing shared libraries to your image, adding the libc6-compat package in your Dockerfile is recommended: apk add --no-cache libc6-compat
 RUN apk add --no-cache libc6-compat
 
+USER node
+
 # Install dependencies
 WORKDIR /app
-COPY ./package.json ./
+COPY --chown=node:node ./package.json ./
 RUN npm install
